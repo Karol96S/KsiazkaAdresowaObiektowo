@@ -1,5 +1,5 @@
-#ifndef MetodyPomocnicze_H
-#define MetodyPomocnicze_H
+#ifndef METODYPOMOCNICZE_H
+#define METODYPOMOCNICZE_H
 
 #include <iostream>
 #include <sstream>
@@ -9,7 +9,16 @@ using namespace std;
 class MetodyPomocnicze
 {
 public:
-    static string konwerjsaIntNaString(int liczba);
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    static string konwersjaIntNaString(int liczba);
+    static int konwersjaStringNaInt(string liczba);
+    static string wczytajLinie();
+    static char wczytajZnak();
+    static int wczytajLiczbeCalkowita();
+
 };
 
 #endif
+
+
+//tu sporo brakuje
