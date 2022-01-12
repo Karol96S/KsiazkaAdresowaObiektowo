@@ -5,7 +5,6 @@ using namespace std;
 
 int main()
 {
-    vector <Adresat> adresaci;
     int idZalogowanegoUzytkownika = 0;
     int idOstatniegoAdresata = 0;
     int idUsunietegoAdresata = 0;
@@ -55,8 +54,7 @@ int main()
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             case '5':
-                //idUsunietegoAdresata = usunAdresata(adresaci);
-                //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
                 //edytujAdresata();
@@ -66,7 +64,7 @@ int main()
                 break;
             case '8':
                 idZalogowanegoUzytkownika = 0;
-                adresaci.clear();
+                ksiazkaAdresowa.wylogowanieUzytkownika();
                 break;
             }
         }

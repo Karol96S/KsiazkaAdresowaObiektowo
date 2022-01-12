@@ -25,6 +25,117 @@ bool PlikZAdresatami:: dopiszAdresataDoPliku(Adresat adresat)
     return false;
 }
 
+bool PlikZAdresatami::usunAdresataZPliku(vector <Adresat> &adresaci)
+{
+    int idUsuwanegoAdresata = 0;
+    idUsuwanegoAdresata = usunAdresata(adresaci);
+
+    if(idUsuwanegoAdresata > 0)
+    {
+        if(idUsuwanegoAdresata == pobierzIdOstatniegoAdresata())
+    idOstatniegoAdresata = idUsuwanegoAdresata - 1;
+
+    return true;
+    }
+    else
+        return false;
+}
+
+int PlikZAdresatami::usunAdresata(vector <Adresat> &adresaci)
+{
+    int idUsuwanegoAdresata = 0;
+    int numerLiniiUsuwanegoAdresata = 0;
+
+    system("cls");
+    cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
+    idUsuwanegoAdresata = podajIdWybranegoAdresata();
+
+    char znak;
+    bool czyIstniejeAdresat = false;
+
+    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+    {
+        if (itr -> pobierzId() == idUsuwanegoAdresata)
+        {
+            czyIstniejeAdresat = true;
+            cout << endl << "Potwierdz naciskajac klawisz 't': ";
+            znak = MetodyPomocnicze::wczytajZnak();
+            if (znak == 't')
+            {
+                usunWybranaLinieWPliku(idUsuwanegoAdresata);
+                adresaci.erase(itr);
+
+                return idUsuwanegoAdresata;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+    }
+    if (czyIstniejeAdresat == false)
+    {
+        cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
+        system("pause");
+    }
+    return 0;
+}
+
+void PlikZAdresatami::usunWybranaLinieWPliku(int idUsuwanegoAdresata)
+{
+    fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
+    string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt";
+    string wczytanaLinia = "";
+    int numerWczytanejLinii = 1;
+    int idSprawdzanegoAdresata = 0;
+
+    odczytywanyPlikTekstowy.open(pobierzNazwePliku().c_str(), ios::in);
+    tymczasowyPlikTekstowy.open(nazwaTymczasowegoPlikuZAdresatami.c_str(), ios::out | ios::app);
+
+    if (odczytywanyPlikTekstowy.good() == true && idUsuwanegoAdresata != 0)
+    {
+        while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
+        {
+            idSprawdzanegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia);
+
+            if (idSprawdzanegoAdresata == idUsuwanegoAdresata) {}
+            else if (numerWczytanejLinii == 1 && idSprawdzanegoAdresata != idUsuwanegoAdresata)
+                tymczasowyPlikTekstowy << wczytanaLinia;
+            else if (numerWczytanejLinii > 1 && idSprawdzanegoAdresata != idUsuwanegoAdresata)
+                tymczasowyPlikTekstowy << endl << wczytanaLinia;
+
+            numerWczytanejLinii++;
+        }
+        odczytywanyPlikTekstowy.close();
+        tymczasowyPlikTekstowy.close();
+
+        usunPlik(pobierzNazwePliku());
+        zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, pobierzNazwePliku());
+    }
+}
+
+int PlikZAdresatami::podajIdWybranegoAdresata()
+{
+    int idWybranegoAdresata = 0;
+    cout << "Podaj numer ID Adresata: ";
+    idWybranegoAdresata  = MetodyPomocnicze::wczytajLiczbeCalkowita();
+    return idWybranegoAdresata;
+}
+
+void PlikZAdresatami::usunPlik(string nazwaPlikuZRozszerzeniem)
+{
+    if (remove(nazwaPlikuZRozszerzeniem.c_str()) == 0) {}
+    else
+        cout << "Nie udalo sie usunac pliku " << nazwaPlikuZRozszerzeniem << endl;
+}
+
+void PlikZAdresatami::zmienNazwePliku(string staraNazwa, string nowaNazwa)
+{
+    if (rename(staraNazwa.c_str(), nowaNazwa.c_str()) == 0) {}
+    else
+        cout << "Nazwa pliku nie zostala zmieniona." << staraNazwa << endl;
+}
+
 string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonePionowymiKreskami(Adresat adresat)
 {
     string liniaZDanymiAdresata = "";

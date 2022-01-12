@@ -16,6 +16,21 @@ void AdresatMenadzer::dodajAdresata()
     system("pause");
 }
 
+void AdresatMenadzer::usunAdresata()
+{
+    system("cls");
+    cout << " >>> USUWANIE ADRESATA <<<" << endl << endl;
+    //adresat = podajDaneNowegoAdresata();                                             //TU
+
+    //adresaci.push_back(adresat);
+    if (plikZAdresatami.usunAdresataZPliku(adresaci))
+        cout << "Adresat zostal usuniety" << endl;
+    else
+        cout << "Blad. Nie udalo sie usunac adresata z pliku." << endl;
+
+    system("pause");
+}
+
 Adresat AdresatMenadzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
