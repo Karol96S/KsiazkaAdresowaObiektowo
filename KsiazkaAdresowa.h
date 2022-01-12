@@ -27,11 +27,19 @@ public:
     };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void logowanieUzytkownika();
+    int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
     void dodajAdresata();
+    void usunAdresata();
+    void edytujAdresata();
     void wyswietlWszystkichAdresatow();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
+    void menuGlowne();
+    int pobierzIdOstatniegoAdresata();
 
 };
 
