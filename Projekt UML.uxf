@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>8</y>
+      <w>112</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>KsiazkaAdresowa
+--
+- uzytkownikMenadzer: UzytkownikMenadzer
+- *adresatMenadzer: AdresatMenadzer
+- NAZWA_PLIKU_Z_ADRESATAMI: string
+--
++ KsiazkaAdresowa()
++ ~KsiazkaAdresowa()
++ rejestracjaUzytkownika(): void
++ wypiszWszystkichUzytkownikow(): void
++ logowanieUzytkownika(): void
++ zmianaHaslaZalogowanegoUzytkownika(): void
++ wylogowanieUzytkownika(): void
++ dodajAdresata(): void
++ usunAdresata(): void
++ edytujAdresata(): void
++ wyswietlWszystkichAdresatow(): void
++ wyszukajAdresatowPoImieniu(): void
++ wyszukajAdresatowPoNazwisku(): void
++ wybierzOpcjeZMenuGlownego(): char
++ wybierzOpcjeZMenuUzytkownika(): char
++ menuGlowne(): void
++ pobierzIdOstatniegoAdresata(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>136</y>
+      <w>84</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Uzytkownik
+--
+- id: integer
+- login: string
+- haslo: string
+--
++ ustawId(): void
++ ustawLogin(): void
++ ustawHaslo(): void
++ pobierzId(): int
++ pobierzLogin(): string
++ pobierzHaslo(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>256</x>
+      <y>8</y>
+      <w>116</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>UzytkownikMenadzer
+--
+- idZalogowanegoUzytkownika: integer
+- uzytkownicy: vector&lt;Uzytkownik&gt;
+- plikZUzytkownikami: PlikZUzytkownikami
+--
+UzytkownikMenadzer()
++ rejestracjaUzytkownika(): void
++ logowanieUzytkownika() : integer
++ zmianaHaslaZalogowanegoUzytkownika(): void
++ wylogowanieUzytkownika(): void
++ wypiszWszystkichUzytkownikow(): void
++ wczytajUzytkownikowZPliku(): void
++ pobierzIdZalogowanegoUzytkownika(): int
+- podajDaneNowegoUzytkownika(): Uzytkownik
+- pobierzIdNowegoUzytkownika(): integer
+- czyIstniejeLogin(): bool
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>268</y>
+      <w>104</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>PlikZUzytkownikami
+--
+- NAZWA_PLIKU_Z_UZYTKOWNIKAMI: string
+--
++ PlikZUzytkownikami()
++ dopiszUzytkownikaDoPliku(): void
++ zapiszWszystkichUzytkownikowDoPliku(): void
++ wczytajUzytkownikaZPliku(): vector &lt;Uzytkownik&gt;
+- czyPlikJestPusty(): bool
+- zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(): string
+- pobierzDaneUzytkownika(): Uzytkownik</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>12</y>
+      <w>172</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>MetodyPomocnicze
+--
+
+--
++ zamienPierwszaLitereNaDuzaAPozostaleNaMale(): static string
++ konwersjaIntNaString(): static string
++ konwersjaStringNaInt(): static int
++ wczytajLinie(): static string
++ wczytajZnak(): static char
++ wczytajLiczbeCalkowita(): static int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>8</y>
+      <w>108</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>AdresatMenadzer
+--
+- ID_ZALOGOWANEGO_UZYTKOWNIKA: integer
+- adresaci: vector &lt;Adresat&gt;
+- plikZAdresatami: PlikZAdresatami
+--
++ AdresatMenadzer()
+- podajNowegoAdresata(): Adresat
+- wyswietlDaneAdresata(): void
++ dodajAdresata(): void
++ usunAdresata(): void
++ edytujAdresata(): void
++ wyswietlWszystkichAdresatow(): void
++ wyszukajAdresatowPoImieniu(): void
++ wyszukajAdresatowPoNazwisku(): void
++ pobierzIdOstatniegoAdresata(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>108</y>
+      <w>104</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Adresat
+--
+- id: integer
+- idUzytkownika: integer
+- imie: string
+- nazwisko: string
+- numerTelefonu: string
+- email: string
+- adres: string
+--
++ Adresat()
++ ustawId(): void
++ ustawIdUzytkownika(): void
++ ustawImie(): void
++ ustawNazwisko(): void
++ ustawNumerTelefonu(): void
++ ustawEmail(): void
++ ustawAdres(): void
++ pobierzId(): integer
++ pobierzIdUzytkownika(): integer
++ pobierzImie(): string
++ pobierzNazwisko(): string
++ pobierzNumerTelefonu(): string
++ pobierzEmail(): string
++ pobierzAdres(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>268</y>
+      <w>112</w>
+      <h>148</h>
+    </coordinates>
+    <panel_attributes>PlikZAdresatami
+--
+- NAZWA_PLIKU_Z_ADRESATAMI: string
+- idOstatniegoAdresata: integer
+--
++ PlikZAdresatami()
+- zamienDaneAdresataNaLinieZDanymiOddzielonePionowymiKreskami(): string
+- pobierzLiczbe(): string
+- pobierzAdresata(): Adresat
+- pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(): integer
+- pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(): integer
+- usunAdresata(): int
+- podajIdWybranegoAdresata(): int
+- usunWybranaLinieWPliku(): void
+- usunPlik(): void
+- zmienNazwePliku(): void
+- edytujWybranaLinieWPliku(): void
+- zaktualizujDaneWybranegoAdresata(): void
+- wybierzOpcjeZMenuEdycja(): char
++ dopiszAdresataDoPliku(): bool
++ wczytajAdresatowZalogowanegoUzytkownikaZPliku(): vector &lt;Adresat&gt;
++ pobierzIdOstatniegoAdresata(): integer
++ edytujAdresata(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>404</x>
+      <y>84</y>
+      <w>120</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>PlikTekstowy
+--
+- NAZWA_PLIKU: const string
+--
++ PlikTekstowy()
++ pobierzNazwePliku(): string
++ czyPlikJestPusty(): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
