@@ -25,7 +25,6 @@ public:
        delete adresatMenadzer;
        adresatMenadzer = NULL;
     };
-    void panelUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     int logowanieUzytkownika();
@@ -33,6 +32,7 @@ public:
     void wylogowanieUzytkownika();
     void dodajAdresata();
     void usunAdresata();
+    void edytujAdresata();
     void wyswietlWszystkichAdresatow();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
