@@ -1,8 +1,9 @@
 bin/
 obj/
-KsiazkaAdresowaObiektowo*
-Projekt UML.uxf
 Uzytkownicy.txt
 KsiazkaAdresowa.txt
+KsiazkaAdresowa.depend
+KsiazkaAdresowa.layout
+.gitignore
 Adresaci.txt
 Adresaci_tymczasowo.txt
