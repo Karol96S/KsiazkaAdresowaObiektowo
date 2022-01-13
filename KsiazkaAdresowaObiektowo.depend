@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1642024717 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\ksiazkaadresowa.cpp
+1642029130 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
 1641338232 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1642024717 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\main.cpp
+1642029130 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 
-1642026746 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\ksiazkaadresowa.h
+1642029130 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenadzer.h"
 	"AdresatMenadzer.h"
@@ -26,7 +26,7 @@
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 
-1641760714 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\metodypomocnicze.cpp
+1642100372 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 	<iostream>
 	<fstream>
@@ -35,11 +35,11 @@
 	<algorithm>
 	<sstream>
 
-1642024717 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\metodypomocnicze.h
+1642029130 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\metodypomocnicze.h
 	<iostream>
 	<sstream>
 
-1641836683 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\plikzuzytkownikami.h
+1642029130 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -48,10 +48,10 @@
 	"MetodyPomocnicze.h"
 	"PlikTekstowy.h"
 
-1641836734 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\plikzuzytkownikami.cpp
+1642029130 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1641760714 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\uzytkownikmenadzer.cpp
+1642100502 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\uzytkownikmenadzer.cpp
 	"UzytkownikMenadzer.h"
 
 1641760714 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\adresat.cpp
@@ -60,7 +60,7 @@
 1641760714 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\adresat.h
 	<iostream>
 
-1642025659 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\adresatmenadzer.h
+1642029130 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\adresatmenadzer.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -69,7 +69,7 @@
 	"PlikZAdresatami.h"
 	"MetodyPomocnicze.h"
 
-1642024717 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\plikzadresatami.h
+1642029130 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\plikzadresatami.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -78,16 +78,16 @@
 	"Adresat.h"
 	"PlikTekstowy.h"
 
-1642025958 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\adresatmenadzer.cpp
+1642029130 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\adresatmenadzer.cpp
 	"AdresatMenadzer.h"
 
-1642025531 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\plikzadresatami.cpp
+1642101428 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1642028268 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\pliktekstowy.h
+1642029130 c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\pliktekstowy.h
 	<iostream>
 	<fstream>
 
-1641835848 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\pliktekstowy.cpp
+1642029130 source:c:\users\gigabyte gaming\desktop\c++ projekty\k.s. projekty\ksiazkaadresowaobiektowo\pliktekstowy.cpp
 	"PlikTekstowy.h"
 

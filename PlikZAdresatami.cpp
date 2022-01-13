@@ -32,9 +32,6 @@ bool PlikZAdresatami::usunAdresataZPliku(vector <Adresat> &adresaci)
 
     if(idUsuwanegoAdresata > 0)
     {
-        if(idUsuwanegoAdresata == pobierzIdOstatniegoAdresata())
-    idOstatniegoAdresata = idUsuwanegoAdresata - 1;
-
     return true;
     }
     else
@@ -97,6 +94,9 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idUsuwanegoAdresata)
         while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
         {
             idSprawdzanegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia);
+
+            if(idSprawdzanegoAdresata != idUsuwanegoAdresata)
+            idOstatniegoAdresata = idSprawdzanegoAdresata;
 
             if (idSprawdzanegoAdresata == idUsuwanegoAdresata) {}
             else if (numerWczytanejLinii == 1 && idSprawdzanegoAdresata != idUsuwanegoAdresata)

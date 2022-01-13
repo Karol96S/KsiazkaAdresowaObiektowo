@@ -19,6 +19,7 @@ Uzytkownik UzytkownikMenadzer::podajDaneNowegoUzytkownika()
     string login;
     do
     {
+        cout << endl;
         cout << "Podaj login: ";
         cin >> login;
         uzytkownik.ustawLogin(login);

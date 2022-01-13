@@ -40,6 +40,7 @@ char MetodyPomocnicze::wczytajZnak()
 
     while(true)
     {
+        cin.sync();
         getline(cin, wejscie);
 
         if (wejscie.length() == 1)
